@@ -1,20 +1,25 @@
-<!DOCTYPE html>  
-<head>  
-<title> CSS float property </title>  
-<style>  
-  
-#left {  
-float: left;  
-}  
-#right {  
-float: right;  
-}  
-  
-</style>  
-</head>  
-  
-<body>  
-<img id = "left" src= "cat.png"/>  
-<img id = "right" src= "cat.png"/>  
-</body>  
-</html>  
+
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="imgbox">
+    <img class="center-fit" src='spacepfp.gif'>
+</div>
+</body>
+</html>
