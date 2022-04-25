@@ -5,8 +5,8 @@ window.onload = (event) => {
   console.log(window.innerHeight);
 
   var pfp = document.getElementById('pfp');
-  pfp.height = window.innerHeight-10;
-  pfp.width = window.innerHeight-10;
+  pfp.height = window.innerHeight-50;
+  pfp.width = window.innerHeight-50;
 
 
 };
