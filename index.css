@@ -1,0 +1,60 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(6,19,53,255);
+    animation: bgTransition 2s ease-in-out 0s 1 forwards;
+
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+}
+#textHi {
+    font-size: 48px;
+    position: fixed;
+    bottom: 50%;
+    left: 10%;
+    /* animation: moveText 1.3s ease-in-out 0.3s 1 forwards; */
+}
+
+#textWho {
+    font-size: 48px;
+    position: fixed;
+    bottom: 42%;
+    left: 11.5%;
+    /* animation: moveText 1.3s ease-in-out 0.3s 1 forwards; */
+}
+button {
+    position: fixed;
+    top: 2.5%;
+
+
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;  
+
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+#btnWork {  
+    left: 3%;
+}
+#btnAbout {  
+    left: 15%;
+}
+#btnContact {  
+    left: 27%;
+}
+
+
+#pfp {
+    position: relative;
+    float: right;
+    margin-right: 0;
+}
+
+
