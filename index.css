@@ -7,12 +7,13 @@ body {
 
   font-family: "Nunito", sans-serif;
   font-weight: bold;
-  color: white;
+  color: white; 
 }
 
 * {
     margin: 0;
     padding: 0;
+    cursor: url(regcursor.png) 20 15, auto;;
 }
 
 #textHi {
@@ -34,6 +35,8 @@ button {
   position: fixed;
   top: 2.5%;
 
+  cursor: url(pointerv4.png) 20 20, auto;
+
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
@@ -51,6 +54,8 @@ button {
 }
 #btnContact {
   left: 27%;
+
+  
 }
 
 .image_layers {
@@ -69,4 +74,8 @@ button {
     top: 1%;
     right: 1%;
     width: 3%;
+
+    cursor: url(pointerv4.png) 20 20, auto;
+
+    
 }
