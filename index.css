@@ -8,9 +8,6 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: bold;
   color: white;
-
-  display: flex;
-  /* justify-content: center; */
 }
 #textHi {
   font-size: 48px;
@@ -52,18 +49,22 @@ button {
 
 .image_layers {
   position: relative;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  right: 0;
 }
 
 #pfp {
-  position: relative;
-  width: 98%;
-  right: -100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 46%;
 }
 
 #github {
-  position: absolute;
-  width: 10%;
-  height: 10%;
-  right: -102%;
-  top: 1%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4%;
 }
