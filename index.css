@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  cursor: url(images/regcursorv4.png) 20 15, auto;;
+  cursor: url(images/regcursorv4.png) 20 15, auto;
 }
 
 body {
@@ -10,9 +10,8 @@ body {
 
   font-family: "Nunito", sans-serif;
   font-weight: bold;
-  color: white; 
+  color: white;
 }
-
 
 @keyframes hiIntro {
   from {
@@ -82,7 +81,6 @@ button:hover {
   transform: scale(1.1);
 }
 
-
 @keyframes navBarBtnsIntro {
   from {
     opacity: 0;
@@ -90,10 +88,9 @@ button:hover {
   }
   to {
     opacity: 1;
-    top: 2.5%;
+    top: 3.5%;
   }
 }
-
 
 #btnWork {
   left: 3%;
@@ -106,8 +103,6 @@ button:hover {
 #btnContact {
   left: 27%;
   animation: navBarBtnsIntro 1s ease 2.1s 1 forwards;
-
-  
 }
 
 .image_layers {
@@ -126,12 +121,50 @@ button:hover {
   }
 }
 
+@keyframes homePfpScaleDown {
+  from {
+    transform: scale(1);
+    border-radius: 0;
+    top: 0%;
+    right: 0%;
+  }
+  to {
+    transform: scale(0.42);
+    border-radius: 50%;
+    top: -19%;
+    right: 2%;
+  }
+}
+@keyframes homePfpCenter {
+  from {
+    transform: scale(0.42);
+    top: -19%;
+    right: 2%;
+  }
+  to {
+    transform: scale(0.1);
+    top: -44.5%;
+    right: 26%;
+  }
+}
+
 #pfp {
-    position: fixed;
-    top: 10%;
-    right: 0;
-    opacity: 0;
-    animation: pfpIntro 1.5s ease 0.7s 1 forwards;
+  position: fixed;
+  top: 10%;
+  right: 0;
+  opacity: 0;
+  animation: pfpIntro 1.5s ease 0.7s 1 forwards;
+}
+
+#homePfp {
+  position: fixed;
+  top: 10%;
+  right: 0;
+  opacity: 0;
+  cursor: url(images/pointerv7.png) 20 20, pointer;
+  animation: pfpIntro 1.5s ease 0.7s 1 forwards,
+    homePfpScaleDown 1.5s ease 2.5s 1 forwards,
+    homePfpCenter 1.5s ease 4.5s 1 forwards;
 }
 
 @keyframes githubLogoIntro {
@@ -146,16 +179,12 @@ button:hover {
 }
 
 #github {
-    position: fixed;
-    cursor: url(images/pointerv7.png) 20 20, pointer;
-    top: 0.5%;
-    right: 1%;
-    width: 3%; 
-    opacity: 0;  
+  position: fixed;
+  cursor: url(images/pointerv7.png) 20 20, pointer;
+  top: 0.5%;
+  right: 1%;
+  width: 3%;
+  opacity: 0;
 
-    animation: githubLogoIntro 0.7s ease 2.5s 1 forwards;
+  animation: githubLogoIntro 0.7s ease 2.5s 1 forwards;
 }
-
-
-
-
