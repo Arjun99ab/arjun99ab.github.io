@@ -70,7 +70,7 @@ button {
 button:after {
   display: block;
   content: "";
-  border-bottom: solid 3px rgba(0,255,255,255);
+  border-bottom: solid 3px #9368e4;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
