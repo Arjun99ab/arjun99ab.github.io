@@ -1,7 +1,10 @@
-body {
-  /* change cursor to match pfp stuff */
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+  cursor: url(images/regcursorv4.png) 20 15, auto;;
+}
+
+body {
   background-color: rgba(6, 19, 53, 255);
   animation: bgTransition 2s ease-in-out 0s 1 forwards;
 
@@ -10,35 +13,53 @@ body {
   color: white; 
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    cursor: url(regcursor.png) 20 15, auto;;
+
+@keyframes hiIntro {
+  from {
+    opacity: 0;
+    bottom: 40%;
+  }
+  to {
+    opacity: 1;
+    bottom: 50%;
+  }
+}
+@keyframes whoIntro {
+  from {
+    opacity: 0;
+    bottom: 32%;
+  }
+  to {
+    opacity: 1;
+    bottom: 42%;
+  }
 }
 
 #textHi {
   font-size: 48px;
   position: fixed;
-  bottom: 50%;
+  bottom: 40%;
   left: 10%;
-  /* animation: moveText 1.3s ease-in-out 0.3s 1 forwards; */
+  opacity: 0;
+  animation: hiIntro 1.5s ease 0.3s 1 forwards;
 }
 
 #textWho {
   font-size: 48px;
   position: fixed;
-  bottom: 42%;
+  bottom: 32%;
   left: 11.5%;
-  /* animation: moveText 1.3s ease-in-out 0.3s 1 forwards; */
+  opacity: 0;
+  animation: whoIntro 1.5s ease 0.3s 1 forwards;
 }
 button {
   position: fixed;
-  top: 2.5%;
+  top: 1%;
+  opacity: 0;
 
-  cursor: url(pointerv4.png) 20 20, auto;
+  cursor: url(images/pointerv7.png) 20 20, auto; /*32 px*/
 
-  background-color: Transparent;
-  background-repeat: no-repeat;
+  background-color: transparent;
   border: none;
 
   font-family: "Nunito", sans-serif;
@@ -46,14 +67,45 @@ button {
   font-weight: bold;
   color: white;
 }
+button:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px rgba(0,255,255,255);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+button:hover:after {
+  transform: scaleX(1);
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+
+@keyframes navBarBtnsIntro {
+  from {
+    opacity: 0;
+    top: 1%;
+  }
+  to {
+    opacity: 1;
+    top: 2.5%;
+  }
+}
+
+
 #btnWork {
   left: 3%;
+  animation: navBarBtnsIntro 1s ease 1.3s 1 forwards;
 }
 #btnAbout {
   left: 15%;
+  animation: navBarBtnsIntro 1s ease 1.7s 1 forwards;
 }
 #btnContact {
   left: 27%;
+  animation: navBarBtnsIntro 1s ease 2.1s 1 forwards;
 
   
 }
@@ -63,19 +115,47 @@ button {
   right: 0;
 }
 
+@keyframes pfpIntro {
+  from {
+    opacity: 0;
+    top: 10%;
+  }
+  to {
+    opacity: 1;
+    top: 0%;
+  }
+}
+
 #pfp {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 10%;
     right: 0;
+    opacity: 0;
+    animation: pfpIntro 1.5s ease 0.7s 1 forwards;
+}
+
+@keyframes githubLogoIntro {
+  from {
+    opacity: 0;
+    top: 0.5%;
+  }
+  to {
+    opacity: 1;
+    top: 1.5%;
+  }
 }
 
 #github {
     position: fixed;
-    top: 1%;
+    cursor: url(images/pointerv7.png) 20 20, pointer;
+    top: 0.5%;
     right: 1%;
-    width: 3%;
+    width: 3%; 
+    opacity: 0;  
 
-    cursor: url(pointerv4.png) 20 20, auto;
-
-    
+    animation: githubLogoIntro 0.7s ease 2.5s 1 forwards;
 }
+
+
+
+
