@@ -250,7 +250,7 @@ button:hover {
 
 #github {
   position: fixed;
-  cursor: url(images\pointerv7.png) 20 20, pointer;
+  cursor: url(images/pointerv7.png) 20 20, pointer;
   top: 0.5%;
   right: 1%;
   width: 3%;

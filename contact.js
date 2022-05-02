@@ -21,7 +21,7 @@ function homeClick() {
 
   sleep(600).then(() => {
     $("body").load("index.html");
-    window.history.pushState({}, "", "index.html");
+    window.history.pushState({}, "", "/");
     document.title = "Arjun Samavedam";
   });
 }
@@ -31,7 +31,7 @@ function workClick() {
 
   sleep(600).then(() => {
     $("body").load("work.html");
-    window.history.pushState({}, "", "work.html");
+    window.history.pushState({}, "", "work");
     document.title = "Work";
   });
 }
@@ -41,7 +41,7 @@ function aboutClick() {
 
   sleep(600).then(() => {
     $("body").load("about.html");
-    window.history.pushState({}, "", "about.html");
+    window.history.pushState({}, "", "about");
     document.title = "About Me";
   });
 }
@@ -51,7 +51,7 @@ function contactClick() {
 
   sleep(600).then(() => {
     $("body").load("contact.html");
-    window.history.pushState({}, "", "contact.html");
+    window.history.pushState({}, "", "contact");
     document.title = "Contact Me";
   });
 }
