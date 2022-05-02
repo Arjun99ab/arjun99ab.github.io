@@ -6,7 +6,6 @@
 
 body {
   background-color: rgba(6, 19, 53, 255);
-  animation: bgTransition 2s ease-in-out 0s 1 forwards;
 
   font-family: "Nunito", sans-serif;
   font-weight: bold;
@@ -23,6 +22,16 @@ body {
     bottom: 50%;
   }
 }
+@keyframes hiOutro {
+  from {
+    opacity: 1;
+    bottom: 50%;
+  }
+  to {
+    opacity: 0;
+    bottom: 40%;
+  }
+}
 @keyframes whoIntro {
   from {
     opacity: 0;
@@ -31,6 +40,16 @@ body {
   to {
     opacity: 1;
     bottom: 42%;
+  }
+}
+@keyframes whoOutro {
+  from {
+    opacity: 1;
+    bottom: 42%;
+  }
+  to {
+    opacity: 0;
+    bottom: 32%;
   }
 }
 
@@ -56,7 +75,7 @@ button {
   top: 1%;
   opacity: 0;
 
-  cursor: url(images/pointerv7.png) 20 20, auto; /*32 px*/
+  cursor: url(images/pointerv7.png) 20 20, auto;
 
   background-color: transparent;
   border: none;
@@ -92,6 +111,19 @@ button:hover {
   }
 }
 
+@keyframes navBarBtnsOutro {
+  from {
+    opacity: 1;
+    top: 3.5%;
+  }
+  to {
+    opacity: 0;
+    top: 1%;
+  }
+}
+
+
+
 #btnWork {
   left: 3%;
   animation: navBarBtnsIntro 1s ease 1.3s 1 forwards;
@@ -117,6 +149,16 @@ button:hover {
   to {
     opacity: 1;
     top: 0%;
+  }
+}
+@keyframes pfpOutro {
+  from {
+    opacity: 1;
+    top: 0%;
+  }
+  to {
+    opacity: 0;
+    top: 10%;
   }
 }
 
@@ -155,6 +197,23 @@ button:hover {
   animation: pfpIntro 1.5s ease 0.7s 1 forwards;
 }
 
+@keyframes homePfpOutro {
+  from {
+    opacity: 1;
+    top: -44.5%;
+    transform: scale(0.1);
+    right: 26%;
+    border-radius: 50%;
+  }
+  to {
+    opacity: 0;
+    top: -47%;
+    transform: scale(0.1);
+    right: 26%;
+    border-radius: 50%;
+  }
+}
+
 #homePfp {
   position: fixed;
   top: 10%;
@@ -178,9 +237,20 @@ button:hover {
   }
 }
 
+@keyframes githubLogoOutro {
+  from {
+    opacity: 1;
+    top: 1.5%;
+  }
+  to {
+    opacity: 0;
+    top: 0.5%;
+  }
+}
+
 #github {
   position: fixed;
-  cursor: url(images/pointerv7.png) 20 20, pointer;
+  cursor: url(images\pointerv7.png) 20 20, pointer;
   top: 0.5%;
   right: 1%;
   width: 3%;

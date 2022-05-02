@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    cursor: url(images/regcursorv4.png) 20 15, auto;
+  }
+  
+  body {
+    background-color: rgba(6, 19, 53, 255);
+    animation: bgTransition 2s ease-in-out 0s 1 forwards;
+  
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+  
+  @keyframes hiIntro {
+    from {
+      opacity: 0;
+      bottom: 40%;
+    }
+    to {
+      opacity: 1;
+      bottom: 50%;
+    }
+  }
+  @keyframes hiOutro {
+    from {
+      opacity: 1;
+      bottom: 50%;
+    }
+    to {
+      opacity: 0;
+      bottom: 40%;
+    }
+  }
+  
+  #textHi {
+    font-size: 48px;
+    position: fixed;
+    bottom: 40%;
+    left: 10%;
+    opacity: 0;
+    animation: hiIntro 1.5s ease 0.3s 1 forwards;
+  }
+  
+  button {
+    position: fixed;
+    top: 1%;
+    opacity: 0;
+  
+    cursor: url(images/pointerv7.png) 20 20, auto; /*32 px*/
+  
+    background-color: transparent;
+    border: none;
+  
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  button:after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px #9368e4;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  button:hover:after {
+    transform: scaleX(1);
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes navBarBtnsIntro {
+    from {
+      opacity: 0;
+      top: 1%;
+    }
+    to {
+      opacity: 1;
+      top: 3.5%;
+    }
+  }
+  @keyframes navBarBtnsOutro {
+    from {
+      opacity: 1;
+      top: 3.5%;
+    }
+    to {
+      opacity: 0;
+      top: 1%;
+    }
+  }
+  
+  #btnWork {
+    left: 3%;
+    animation: navBarBtnsIntro 1s ease 1.3s 1 forwards;
+  }
+  #btnAbout {
+    left: 15%;
+    animation: navBarBtnsIntro 1s ease 1.7s 1 forwards;
+  }
+  #btnContact {
+    left: 27%;
+    animation: navBarBtnsIntro 1s ease 2.1s 1 forwards;
+  }
+  @keyframes homePfpIntro {
+    from {
+      top: -44%;
+      opacity: 0;
+    }
+    to {
+      top: -41.3%;
+      opacity: 1;
+    }
+  }
+  @keyframes homePfpOutro {
+    from {
+      opacity: 1;
+      top: -41.3%;
+    }
+    to {
+      opacity: 0;
+      top: -44%;
+    }
+  }
+  
+  #homePfp {
+    position: fixed;
+    opacity: 0;
+    transform: scale(0.105);
+    top: -44%;
+    right: 27.6%;
+    border-radius: 50%;
+    cursor: url(images/pointerv7.png) 20 20, pointer;
+    animation: homePfpIntro 1s ease 2.5s 1 forwards;
+  }
+
+  @keyframes githubLogoIntro {
+    from {
+      opacity: 0;
+      top: 0.5%;
+    }
+    to {
+      opacity: 1;
+      top: 1.5%;
+    }
+  }
+  
+  @keyframes githubLogoOutro {
+    from {
+      opacity: 1;
+      top: 1.5%;
+    }
+    to {
+      opacity: 0;
+      top: 0.5%;
+    }
+  }
+  
+  #github {
+    position: fixed;
+    cursor: url(images/pointerv7.png) 20 20, pointer;
+    top: 0.5%;
+    right: 1%;
+    width: 3%;
+    opacity: 0;
+  
+    animation: githubLogoIntro 0.7s ease 2.9s 1 forwards;
+  }
+  

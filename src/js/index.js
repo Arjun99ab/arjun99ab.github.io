@@ -1,0 +1,65 @@
+$(document).ready(function() {
+  console.log( "document loaded" );
+  console.log(window.innerHeight);
+
+  var pfp = document.getElementById("pfp");
+  pfp.height = window.innerHeight;
+  pfp.width = window.innerHeight;
+  var homePfp = document.getElementById("homePfp");
+  homePfp.height = window.innerHeight;
+  homePfp.width = window.innerHeight;
+});
+
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+function elementsOutro() {
+  document.getElementById('btnWork').style.animation = "navBarBtnsOutro 0.5s ease";
+  document.getElementById('btnAbout').style.animation = "navBarBtnsOutro 0.5s ease";
+  document.getElementById('btnContact').style.animation = "navBarBtnsOutro 0.5s ease";
+  document.getElementById('homePfp').style.animation = "homePfpOutro 0.5s ease";
+  document.getElementById('github').style.animation = "githubLogoOutro 0.5s ease";
+  document.getElementById('pfp').style.animation = "pfpOutro 0.5s ease";
+  document.getElementById('textHi').style.animation = "hiOutro 0.5s ease";
+  document.getElementById('textWho').style.animation = "whoOutro 0.5s ease";
+}
+
+
+
+function githubClick() {
+  window.open("https://github.com/Arjun99ab", "_blank");
+}
+
+
+
+function workClick() {
+  elementsOutro();
+
+  sleep(600).then(() => {
+    $("body").load("work.html");
+    window.history.pushState({}, "", "work.html");
+    document.title = "Work";
+  }); 
+  //window.location.replace("index.html");
+}
+
+function aboutClick() {
+  elementsOutro();
+  
+  sleep(600).then(() => {
+    $("body").load("about.html");
+    window.history.pushState({}, "", "about.html");
+    document.title = "About Me";
+  });
+}
+
+function contactClick() {
+  elementsOutro();
+  
+  sleep(600).then(() => {
+    $("body").load("contact.html");
+    window.history.pushState({}, "", "contact.html");
+    document.title = "Contact Me";
+  });
+}
