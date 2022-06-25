@@ -106,36 +106,95 @@
     left: 27%;
     animation: navBarBtnsIntro 1s ease 2.1s 1 forwards;
   }
+
   @keyframes homePfpIntro {
     from {
-      top: -44%;
       opacity: 0;
+      top: 10%;
     }
     to {
-      top: -41.3%;
-      opacity: 1;
+      opacity: 0;
+      top: 0%;
     }
   }
+  
   @keyframes homePfpOutro {
     from {
+      transform: scale(0.1);
+      top: -44.5%;
+      right: 26%;
       opacity: 1;
-      top: -41.3%;
     }
     to {
+      transform: scale(0.1);
+      top: -47%;
+      right: 26%;
       opacity: 0;
-      top: -44%;
+    }
+  }
+
+  @keyframes homePfpScaleDown {
+    from {
+      transform: scale(1);
+      top: 0%;
+      right: 0%;
+    }
+    to {
+      transform: scale(0.42);
+      top: -18.4%;
+      right: 1.6%;
+    }
+  }
+  @keyframes homePfpCenter {
+    from {
+      transform: scale(0.42);
+      top: -18.4%;
+      right: 1.6%;
+    }
+    to {
+      transform: scale(0.1);
+      top: -44.5%;
+      right: 26%;
+    }
+  }
+  @keyframes homePfpUp {
+    from {
+      transform: scale(0.1);
+      top: -44.5%;
+      right: 26%;
+    }
+    to {
+      transform: scale(0.1);
+      top: -47%;
+      right: 26%;
+    }
+  }
+  @keyframes homePfpDown {
+    from {
+      transform: scale(0.1);
+      top: -47%;
+      right: 26%;
+    }
+    to {
+      transform: scale(0.1);
+      top: -44.5%;
+      right: 26%;
+      opacity: 1;
     }
   }
   
   #homePfp {
     position: fixed;
+    top: 10%;
+    right: 0;
     opacity: 0;
-    transform: scale(0.105);
-    top: -44%;
-    right: 27.6%;
     border-radius: 50%;
-    cursor: url(images/pointerv7.png) 20 20, pointer;
-    animation: homePfpIntro 1s ease 2.5s 1 forwards;
+    cursor: url(images/pointerv7.png) 20 20, pointer; 
+    animation: homePfpIntro 0.5s ease 0.5s 1 forwards,
+      homePfpScaleDown 0.5s ease 1s 1 forwards,
+      homePfpCenter 0.5s ease 1.5 forwards,
+      homePfpUp 0.5s ease 2s forwards,
+      homePfpDown 1s ease 2.5s forwards; 
   }
 
   @keyframes githubLogoIntro {

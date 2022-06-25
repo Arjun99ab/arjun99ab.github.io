@@ -1,3 +1,11 @@
+$(document).ready(function() {
+  console.log( "document loaded" );
+  console.log(window.innerHeight);
+
+  var homePfp = document.getElementById("homePfp");
+  homePfp.height = window.innerHeight;
+  homePfp.width = window.innerHeight;
+});
 
 function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
