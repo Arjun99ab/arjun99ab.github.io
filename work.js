@@ -63,4 +63,13 @@ function contactClick() {
     document.title = "Contact Me";
   });
 }
+
+
+window.addEventListener('resize', function(event) {
+  if ($('#reload').length === 0) {
+    createGuiElement("reload", 5, 5);
+    document.getElementById("reload").innerHTML = "Looks like you resized your window!" + "<br />" + "Reload the page to fix any issues.";
+    document.getElementById('reload').style.textAlign = "center";
+  }
   
+}, true);

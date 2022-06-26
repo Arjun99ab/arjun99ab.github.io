@@ -12,7 +12,83 @@
     font-weight: bold;
     color: white;
   }
+  @keyframes contactFormLogoIntro {
+    from {
+      opacity: 0;
+      bottom: 17%;
+    }
+    to {
+      opacity: 1;
+      bottom: 15%;
+    }
+  }
   
+  @keyframes contactFormLogoOutro {
+    from {
+      opacity: 1;
+      bottom: 15%;
+    }
+    to {
+      opacity: 0;
+      bottom: 17%;
+    }
+  }
+
+  #contactForm {  
+    position: fixed;
+    bottom: 15%;
+    right: 8%;
+    transform: scale(1.2);
+    opacity: 0;
+    
+
+    animation: contactFormLogoIntro 0.9s ease 3s 1 forwards;
+
+    
+  }
+
+  .formSections {
+    text-align: center;
+  }
+  
+  .formSections input {
+    background-color: #9368e4;
+    margin-top: 0px;
+    padding: 1px;
+    margin-bottom: 4px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    cursor: url(images/textCursor.png) 17 20, auto;
+  }
+  .formSections label {
+    font-size: 24px;
+    cursor: url(images/textCursor.png) 17 20, auto;
+  }
+  
+  .formSections #submit {
+    font-weight: bold;
+    font-size: 22px;
+    padding: 5px;
+    margin-left: 1%; 
+    margin-top: 5px;
+    cursor: url(images/pointerv7.png) 20 20, auto;
+  }
+  .formSections textarea {
+    background-color: #9368e4;
+    margin-top: 0px;
+    padding: 1px;
+    margin-bottom: 4px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    resize: none;
+    cursor: url(images/textCursor.png) 17 20, auto;
+  }
+  .formSections textarea::placeholder {
+    color: black;
+  }
+
   @keyframes hiIntro {
     from {
       opacity: 0;
@@ -41,6 +117,7 @@
     left: 10%;
     opacity: 0;
     animation: hiIntro 1.5s ease 0.3s 1 forwards;
+    cursor: url(images/textCursor.png) 17 20, auto;
   }
   
   button {
@@ -197,6 +274,8 @@
       homePfpDown 1s ease 2.5s forwards; 
   }
 
+
+
   @keyframes githubLogoIntro {
     from {
       opacity: 0;
@@ -227,6 +306,6 @@
     width: 3%;
     opacity: 0;
   
-    animation: githubLogoIntro 0.7s ease 2.9s 1 forwards;
+    animation: githubLogoIntro 0.7s ease 3.4s 1 forwards;
   }
   

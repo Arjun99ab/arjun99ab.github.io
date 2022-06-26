@@ -12,9 +12,27 @@
     <script src="contact.js"></script>
   </head>
   <body>
-    <div id="textHi">contact me</div>
+    <div id="textHi">Contact Me!</div>
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+    
+    <form target="dummyframe" id="contactForm">
+      <div class="formSections">
+        <label for="name">Name:</label><br> 
+        <input type="text" id="name" name="first"><br>
+        <label for="name">Email:</label><br>
+        <input type="text" id="email" name="email"><br> 
+        <label for="name">Discord:</label><br>
+        <input type="text" id="discord" name="discord"><br>
+        <label for="Message">Message:</label><br>
+        <textarea rows="10" cols="50" name="message" id="message" maxlength="500" placeholder="500 character limit..."></textarea>
+        
+        <input type="submit" value="Submit" id="submit">
+      </div>
+    </form>
 
     <button id="btnWork" onclick="workClick()">Work</button>
+    
     <button id="btnAbout" onclick="aboutClick()">About</button>
     <button id="btnContact" onclick="contactClick()">Contact</button>
     <img src="images/spacepfp.gif" id="homePfp" onclick="homeClick()" />
