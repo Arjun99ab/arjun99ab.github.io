@@ -68,32 +68,7 @@ function contactClick() {
   });
 }
 
-let createGuiElement = (id1, bottom, right) => {
-  element = document.createElement("div")
-  css = {
-      backgroundColor: "#9368e4",
-      border: "solid",
-      borderColor: "black",
-      borderWidth: "2px",
-      borderRadius: "7px",
-      fontFamily: "Nunito",
-      position: "absolute",
-      bottom: bottom.toString() + "px",
-      right: right.toString() + "px",
-      padding: "5px",
-      color: "black",
-      fontSize: "10pt",
-  };
-  Object.keys(css).forEach(function (x) {
-    element.style[x] = css[x];
-  });
-  element.id = id1;
-  // add the text node to the newly created div
-  //element.appendChild(newContent);
 
-  document.body.appendChild(element);
-
-};
 
 window.addEventListener('resize', function(event) {
   if ($('#reload').length === 0) {

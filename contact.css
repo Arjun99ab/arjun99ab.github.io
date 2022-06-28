@@ -234,7 +234,7 @@
       right: 26%;
     }
   }
-  @keyframes homePfpUp {
+  @keyframes homePfpUp { 
     from {
       transform: scale(0.1);
       top: -44.5%;
